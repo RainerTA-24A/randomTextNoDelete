@@ -1,0 +1,56 @@
+const url = "https://kool.krister.ee/chat/randomtext3";
+
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
+const Button = document.getElementById("btn");
+
+function addText() {
+    if (inputBox.value === '') {
+        alert("Write something you donut!");
+        return;
+    }
+
+    let li = document.createElement("li");
+    li.innerHTML = inputBox.value;
+
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7"; // '×' symbol
+    span.onclick = function () {
+        li.remove(); 
+    };
+
+    // Append the delete button to the list item
+    li.appendChild(span);
+
+    listContainer.appendChild(li);
+
+}
+
+async function fetchMessages() {
+  const response = await fetch(url);
+  const data = await response.json();
+
+  
+  element.innerHTML = "";
+  for (const item of data) {
+    const kiri = item.kiri;
+    element.innerHTML += kiri;
+  }
+}
+
+setInterval(fetchMessages, 3000);
+
+Button.addEventListener("click", function () {
+  const message = {
+      kiri: inputBox.value
+  };
+
+fetch(url, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(message)
+});
+})
+

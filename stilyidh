@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' 'sans-serif';
+    box-sizing: border-box;
+  }
+  
+  .container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #7e3457, #153677, #4e085f, #8e7428);
+    padding: 10px;
+  }
+  
+  .randomtext{
+    width: 100%;
+    max-width: 550px;
+    background: #fff;
+    margin: 120px auto;
+    padding: 45px 35px 75px;
+    border-radius: 50px;
+  }
+  
+  
+  .randomtext h2{
+    color: #002765;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #88d1d2, #c069d5) ;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  
+  input{
+    flex: 1;
+    border: none; 
+    outline: none;
+    background: transparent;
+    font-weight: 14px;  
+    border-radius: 20px;
+    padding: 10px;
+  }
+  
+  button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: linear-gradient(135deg, #002765, #7e3457);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 40px;
+  }
+  
+  ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    position: relative;
+  }
+  
+  ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    background: linear-gradient(135deg, #002765, #7e3457);
+    border-radius: 50px;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+  }
+  
+  ul li span:hover{
+    background: black;
+  }
+  /*ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(picturah/circle.png);
+    background-size: cover; 
+    background-position: center;
+    top: 12px;
+    left: 8px;
+  }
+  
+  ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+  }
+  */
